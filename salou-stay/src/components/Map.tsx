@@ -1,17 +1,16 @@
-// src/components/MapComponent.tsx
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-// Impostazioni della mappa
+// Map settings
 const containerStyle = {
     width: '100%',
-    height: '400px'  // Imposta l'altezza della mappa
+    height: '400px'  // Set the map height
 };
 
-// Coordinate dell'appartamento (modifica con le coordinate reali)
+// Apartment coordinates (replace with real coordinates)
 const center = {
-    lat: 41.07775,  // Inserisci la latitudine
-    lng: 1.25785    // Inserisci la longitudine
+    lat: 41.07775,  // Enter the latitude
+    lng: 1.25785    // Enter the longitude
 };
 
 const MapComponent: React.FC = () => {
@@ -22,7 +21,7 @@ const MapComponent: React.FC = () => {
             <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
-                zoom={15}  // Livello di zoom
+                zoom={15}  // Zoom level
             >
                 <Marker position={center} />
             </GoogleMap>
@@ -30,4 +29,4 @@ const MapComponent: React.FC = () => {
     );
 };
 
-export default MapComponent;  // Assicurati che ci sia l'esportazione predefinita
+export default MapComponent;  // Ensure there is a default export

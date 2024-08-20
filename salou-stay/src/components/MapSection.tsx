@@ -1,4 +1,3 @@
-// src/components/MapSection.tsx
 import React from 'react';
 import MapComponent from './Map';
 import '../MapSection.css';

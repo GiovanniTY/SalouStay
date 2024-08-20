@@ -1,14 +1,11 @@
-/* src/Hero.css */
 
-/* Importa il font estivo */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* Stili per la sezione Hero */
 .hero {
     position: relative;
     overflow: hidden;
-    height: 100vh; /* Occupa l'intera altezza della finestra */
-    background: linear-gradient(135deg, #87cefa, #f5deb3); /* Azzurro Chiaro e Beige Sabbia */
+    height: 100vh; 
+    background: linear-gradient(135deg, #87cefa, #f5deb3); 
 }
 
 .hero img {
@@ -19,7 +16,7 @@
     top: 0;
     left: 0;
     z-index: 0;
-    filter: brightness(70%); /* Diminuisce la luminosità dell'immagine */
+    filter: brightness(70%); 
 }
 
 .hero-text {
@@ -33,7 +30,7 @@
 }
 
 .hero-text h1 {
-    font-family: 'Pacifico', cursive; /* Font estivo */
+    font-family: 'Pacifico', cursive; 
     font-size: 4em;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-out;
