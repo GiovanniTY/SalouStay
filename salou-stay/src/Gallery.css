@@ -1,6 +1,7 @@
 /* src/components/Gallery.css */
-#gallery-title{
- font-size: 50px;
+
+#gallery-title {
+    font-size: 50px;
 }
 
 .gallery {
@@ -9,7 +10,6 @@
     margin: 0;
     overflow: hidden; /* Nasconde le immagini che superano il contenitore */
     background: linear-gradient(135deg, #87cefa, #f5deb3); /* Azzurro Chiaro e Beige Sabbia */
-    
 }
 
 .gallery-container {
@@ -42,6 +42,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 10; /* Assicura che i bottoni siano sopra le immagini */
 }
 
 .prev {

@@ -52,7 +52,7 @@ const Features: React.FC = () => {
                 </div>
             </div>
 
-            <h3>SITUATION :</h3>
+            <h3 id='situation'>SITUATION :</h3>
             <p>A 15 minutes de l'aéroport de Reus ✈️, situé au deuxième étage avec ascenseur, accessible pour les personnes à mobilité réduite. A peine une minute à pieds de la plage avec bars, douche 🚿 et promenade. Proche du port et des activités nautiques, ainsi que des commodités : restaurants, pharmacie, boucherie, supermarché. À environ 10 minutes des parcs d'attractions PortAventura, Ferrari Land, et le parc aquatique Aquopolis. Arrêt de bus 🚍 à proximité, ainsi que location de vélos et trottinettes.</p>
             <p>Réservez dès maintenant pour des vacances inoubliables à Salou 😊. Pour plus d'infos, merci de nous contacter en mp. À bientôt ⛱️</p>
         </section>

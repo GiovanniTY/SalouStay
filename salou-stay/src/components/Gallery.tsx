@@ -5,15 +5,15 @@ const Gallery: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const images = [
-        '/public/img/PHOTO-2024-08-19-16-19-12 2.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-12 3.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-12 4.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-12.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-13 2.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-13 3.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-13 4.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-13.jpg',
-        '/public/img/PHOTO-2024-08-19-16-19-14 2.jpg',
+        '/img/PHOTO-2024-08-19-16-19-12 2.jpg',
+        '/img/PHOTO-2024-08-19-16-19-12 3.jpg',
+        '/img/PHOTO-2024-08-19-16-19-12 4.jpg',
+        '/img/PHOTO-2024-08-19-16-19-12.jpg',
+        '/img/PHOTO-2024-08-19-16-19-13 2.jpg',
+        '/img/PHOTO-2024-08-19-16-19-13 3.jpg',
+        '/img/PHOTO-2024-08-19-16-19-13 4.jpg',
+        '/img/PHOTO-2024-08-19-16-19-13.jpg',
+        '/img/PHOTO-2024-08-19-16-19-14 2.jpg',
     ];
 
     const handlePrev = () => {
@@ -53,20 +53,4 @@ const Gallery: React.FC = () => {
 
 export default Gallery;
 
-/* const Gallery: React.FC = () => {
-    return (
-        <section className="gallery">
-            <h2>Galleria</h2>
-            <div>
-                <img src="/public/img/PHOTO-2024-08-19-16-19-12 2.jpg" alt="" />
-                <img src="/public/img/PHOTO-2024-08-19-16-19-12 3.jpg" />
-                <img src="/public/img/PHOTO-2024-08-19-16-19-12 4.jpg" alt="Immagine 3" />
-                <img src="/public/img/PHOTO-2024-08-19-16-19-12.jpg" alt="Immagine 3" />
-                <img src="/public/img/PHOTO-2024-08-19-16-19-13 2.jpg" alt="Immagine 3" />
-            </div>
-        </section>
-    );
-};
 
-export default Gallery;
- */
