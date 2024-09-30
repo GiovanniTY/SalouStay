@@ -4,7 +4,8 @@ import './App.css';
 import Features from './components/Features';
 import Proximity from './components/Proximity';
 import MapSection from './components/MapSection';
-import BookingSection from './components/BookingSection';
+import Tarif from './components/Tarif';
+
 
 
 const App: React.FC = () => {
@@ -14,7 +15,7 @@ const App: React.FC = () => {
           <Features/>
           <Proximity/>
           <Gallery />
-          <BookingSection/>
+          <Tarif/>
           <MapSection/>
          
       </div>

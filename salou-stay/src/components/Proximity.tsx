@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import '../Proximity.css';
 
 const Proximity: React.FC = () => {
-    // Ref for referencing elements to animate
+    // Ref per riferirsi agli elementi che si desidera animare
     const itemRefs = useRef<HTMLDivElement[]>([]);
 
     useEffect(() => {
-        // Function to apply the animation class
+        // Funzione per applicare la classe di animazione
         const handleScroll = () => {
             itemRefs.current.forEach((item) => {
                 const rect = item.getBoundingClientRect();
@@ -16,24 +16,24 @@ const Proximity: React.FC = () => {
             });
         };
 
-        // Add the scroll event listener
+        // Aggiungi l'event listener per lo scroll
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial call to animate elements visible on load
+        handleScroll(); // Chiamata iniziale per animare gli elementi visibili al caricamento
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
         <section className="proximity">
-            <h2 className="proximity-title">Nearby</h2>
+            <h2 className="proximity-title">À Proximité</h2>
             <div className="proximity-item" ref={el => el && (itemRefs.current[0] = el)}>
                 <div className="proximity-text">
                     <h3>PortAventura World</h3>
                     <p>
-                        Located in Salou, near Tarragona, it is one of the largest theme parks in Europe.
-                        The park is divided into five themed areas: Mediterranean, Polynesia, China, Mexico, and Far West, each offering
-                        attractions, shows, and restaurants inspired by the culture and traditions of these regions. Some of the most famous attractions
-                        include thrilling roller coasters like "Shambhala" and "Dragon Khan".
+                        Situé à Salou, près de Tarragone, c’est l’un des plus grands parcs à thème en Europe.
+                        Le parc est divisé en cinq zones thématiques : Méditerranée, Polynésie, Chine, Mexique et Far West, chacune offrant des
+                        attractions, des spectacles et des restaurants inspirés par la culture et les traditions de ces régions. Parmi les attractions les plus célèbres,
+                        on trouve des montagnes russes palpitantes comme le "Shambhala" et le "Dragon Khan".
                     </p>
                 </div>
                 <div className="proximity-image">
@@ -44,8 +44,8 @@ const Proximity: React.FC = () => {
                 <div className="proximity-text">
                     <h3>Ferrari Land</h3>
                     <p>
-                        Adjacent to PortAventura, Ferrari Land is dedicated to the world of Ferrari and sports cars. The park offers exciting attractions inspired by speed and automotive technology,
-                        such as the "Red Force" roller coaster, the highest and fastest in Europe. Ferrari Land pays tribute to the Formula 1 legend and the Ferrari brand.
+                        Adjacent à PortAventura, Ferrari Land est dédié à l'univers de Ferrari et aux voitures de sport. Le parc propose des attractions excitantes inspirées par la vitesse et la technologie automobile,
+                        comme les montagnes russes "Red Force", les plus hautes et les plus rapides d’Europe. Ferrari Land rend hommage à la légende de la Formule 1 et à la marque Ferrari.
                     </p>
                 </div>
                 <div className="proximity-image">
@@ -56,7 +56,7 @@ const Proximity: React.FC = () => {
                 <div className="proximity-text">
                     <h3>Aquópolis</h3>
                     <p>
-                        Located in La Pineda, a seaside resort close to Salou, Aquópolis is a water park offering a wide range of water attractions, including dizzying slides, wave pools, and areas specially designed for children. It’s the perfect place to cool off and have fun with the family on hot summer days.
+                        Situé à La Pineda, une station balnéaire proche de Salou, Aquópolis est un parc aquatique offrant une large gamme d’attractions aquatiques, y compris des toboggans vertigineux, des piscines à vagues et des zones spécialement conçues pour les enfants. C'est l'endroit idéal pour se rafraîchir et s'amuser en famille lors des chaudes journées estivales.
                     </p>
                 </div>
                 <div className="proximity-image">

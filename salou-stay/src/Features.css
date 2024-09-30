@@ -87,3 +87,30 @@
     z-index: -1;
     opacity: 0.5;
 }
+
+.whatsapp-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    color: #25D366;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    padding: 15px 25px; /* Aumenta il padding per rendere il pulsante più grande */
+    font-size: 30px; /* Dimensione del testo */
+    transition: background-color 0.3s;
+}
+
+
+
+/* Media query per dispositivi più grandi */
+@media (min-width: 768px) {
+    .whatsapp-button {
+        padding: 20px 30px; /* Aumenta ulteriormente il padding su desktop */
+        font-size: 30px; /* Dimensione del testo più grande su desktop */
+    }
+}

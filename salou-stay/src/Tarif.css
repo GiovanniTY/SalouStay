@@ -1,0 +1,45 @@
+.tarif-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #aeeeee 0%, #f5deb3 100%); /* Gradiente blu e sabbia */
+}
+
+#tarif-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.tarif-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarif-images img {
+    width: 100%;
+    max-width: 450px; /* Limita la larghezza delle immagini */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarif-paragraph {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .tarif-images {
+        flex-direction: column; /* Dispone le immagini in colonna (una sotto l'altra) */
+        align-items: center; /* Centra le immagini */
+    }
+
+    .tarif-images img {
+        max-width: 100%; /* Le immagini occupano tutta la larghezza disponibile su dispositivi mobili */
+    }
+}

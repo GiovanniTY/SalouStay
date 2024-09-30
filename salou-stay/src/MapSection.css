@@ -1,7 +1,7 @@
-/* src/components/MapSection.css */
+
 .map-section {
     padding: 40px 20px;
-    background-color: #ffffff; /* Colore di sfondo della sezione mappa */
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
@@ -10,6 +10,6 @@
 
 .map-section h2 {
     font-size: 2em;
-    color: #ff6f61; /* Colore vivace per il titolo */
+    color: #ff6f61; 
     margin-bottom: 20px;
 }

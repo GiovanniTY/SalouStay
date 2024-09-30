@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../BookingSection.css';
@@ -25,9 +25,9 @@ const BookingSection = () => {
         { start: new Date('2024-12-21'), end: new Date('2024-12-31'), season: 'Moyenne saison' },
     ];
 
-    const cleaningFee = 50;
+    const cleaningFee = 60;
 
-    // Function to check if a date is booked
+    // Funzione per verificare se una data è prenotata
     const isBooked = (date: Date) => {
         return bookedDates.some(bookedDate =>
             date.toDateString() === bookedDate.toDateString()
@@ -36,7 +36,7 @@ const BookingSection = () => {
 
     const handleCalculation = () => {
         if (!startDate || !endDate) {
-            alert("Please select start and end dates.");
+            alert("Veuillez sélectionner les dates de début et de fin.");
             return;
         }
 
@@ -46,26 +46,26 @@ const BookingSection = () => {
         let seasonPriceTotal = 0;
 
         if (end < start) {
-            alert("The end date cannot be earlier than the start date.");
+            alert("La date de fin ne peut pas être antérieure à la date de début.");
             return;
         }
 
-        // Check if dates are already booked
+        // Verifica se le date sono già prenotate
         for (let current = new Date(start); current <= end; current.setDate(current.getDate() + 1)) {
             if (isBooked(current)) {
-                alert(`The date ${current.toDateString()} is already booked.`);
+                alert(`La date ${current.toDateString()} est déjà réservée.`);
                 return;
             }
         }
 
-        // Calculate the number of nights
+        // Calcolare il numero di notti
         const numNights = Math.floor((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24)) + 1;
         if (numNights <= 0) {
-            alert("The stay must be at least one night.");
+            alert("La durée du séjour doit être d'au moins une nuit.");
             return;
         }
 
-        // Calculate the total price based on the season
+        // Calcolare il prezzo totale in base alla stagione
         for (let current = new Date(start); current <= end; current.setDate(current.getDate() + 1)) {
             const dateString = current.toISOString().split('T')[0];
             const season = seasonDates.find(season => current >= season.start && current <= season.end);
@@ -76,10 +76,10 @@ const BookingSection = () => {
             }
         }
 
-        // Add cleaning fee
+        // Aggiungere la spesa per le pulizie
         total += cleaningFee;
 
-        // Set price details
+        // Impostare i dettagli dei prezzi
         setTotalPrice(total);
         setPriceDetails({
             seasonPrice: seasonPriceTotal,
@@ -89,29 +89,29 @@ const BookingSection = () => {
 
     const handleBook = () => {
         if (!startDate || !endDate) {
-            alert("Please select start and end dates.");
+            alert("Veuillez sélectionner les dates de début et de fin.");
             return;
         }
 
         const start = startDate;
         const end = endDate;
 
-        // Check if dates are already booked
+        // Verifica se le date sono già prenotate
         for (let current = new Date(start); current <= end; current.setDate(current.getDate() + 1)) {
             if (isBooked(current)) {
-                alert(`The date ${current.toDateString()} is already booked.`);
+                alert(`La date ${current.toDateString()} est déjà réservée.`);
                 return;
             }
         }
 
-        // Add booked dates to the list
+        // Aggiungere le date prenotate all'elenco
         const newBookedDates = [];
         for (let current = new Date(start); current <= end; current.setDate(current.getDate() + 1)) {
             newBookedDates.push(new Date(current));
         }
 
         setBookedDates([...bookedDates, ...newBookedDates]);
-        alert("Booking successful!");
+        alert("Réservation effectuée avec succès !");
         setStartDate(null);
         setEndDate(null);
         setTotalPrice(null);
@@ -120,48 +120,48 @@ const BookingSection = () => {
 
     return (
         <section className="booking-section">
-            <h2>Book Your Vacation</h2>
+            <h2>Réservez vos vacances</h2>
 
             <div className="date-picker">
-                <label htmlFor="start-date">Start Date:</label>
+                <label htmlFor="start-date">Date de début :</label>
                 <DatePicker
                     selected={startDate}
                     onChange={(date: Date | null) => setStartDate(date)}
                     minDate={new Date()}
-                    placeholderText="Select a start date"
+                    placeholderText="Sélectionnez une date de début"
                     dateFormat="yyyy/MM/dd"
                     filterDate={(date: Date) => !isBooked(date)}
                 />
 
-                <label htmlFor="end-date">End Date:</label>
+                <label htmlFor="end-date">Date de fin :</label>
                 <DatePicker
                     selected={endDate}
                     onChange={(date: Date | null) => setEndDate(date)}
                     minDate={startDate ? startDate : new Date()}
-                    placeholderText="Select an end date"
+                    placeholderText="Sélectionnez une date de fin"
                     dateFormat="yyyy/MM/dd"
                     filterDate={(date: Date) => !isBooked(date)}
                 />
             </div>
 
-            <button onClick={handleCalculation} className="calculate-button">Calculate Price</button>
+            <button onClick={handleCalculation} className="calculate-button">Calculer le prix</button>
 
             {totalPrice !== null && priceDetails && (
                 <div className="total-price">
-                    <h3>Price Details:</h3>
-                    <p>Price for nights: {priceDetails.seasonPrice} €</p>
-                    <p>Cleaning Fee: {priceDetails.cleaningFee} €</p>
-                    <h3>Total Price: {totalPrice} €</h3>
-                    <button onClick={handleBook} className="book-button">Book</button>
+                    <h3>Détails du prix :</h3>
+                    <p>Prix pour les nuits: {priceDetails.seasonPrice} €</p>
+                    <p>Frais de nettoyage: {priceDetails.cleaningFee} €</p>
+                    <h3>Prix total: {totalPrice} €</h3>
+                    <button onClick={handleBook} className="book-button">Réserver</button>
                 </div>
             )}
 
             <div className="season-legend">
-                <h3>Season Legend:</h3>
+                <h3>Légende des saisons :</h3>
                 <ul>
                     {seasonDates.map((seasonDate, index) => (
                         <li key={index}>
-                            <strong>{seasonDate.season}:</strong> {seasonDate.start.toISOString().split('T')[0]} - {seasonDate.end.toISOString().split('T')[0]} (Price: {seasonPrices[seasonDate.season]} € per night)
+                            <strong>{seasonDate.season}:</strong> {seasonDate.start.toISOString().split('T')[0]} - {seasonDate.end.toISOString().split('T')[0]} (Prix: {seasonPrices[seasonDate.season]} € par nuit)
                         </li>
                     ))}
                 </ul>
@@ -171,3 +171,4 @@ const BookingSection = () => {
 };
 
 export default BookingSection;
+ */

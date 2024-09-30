@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Features.css';
+import { FaWhatsapp } from 'react-icons/fa'; // Importa l'icona di WhatsApp
 
 const Features: React.FC = () => {
     return (
@@ -51,9 +52,18 @@ const Features: React.FC = () => {
                 </div>
             </div>
 
-            <h3 id='situation'>SITUATION :</h3>
+            <h3 id='situation'>Situation :</h3>
             <p>A 15 minutes de l'aéroport de Reus ✈️, situé au deuxième étage avec ascenseur, accessible pour les personnes à mobilité réduite. A peine une minute à pieds de la plage avec bars, douche 🚿 et promenade. Proche du port et des activités nautiques, ainsi que des commodités : restaurants, pharmacie, boucherie, supermarché. À environ 10 minutes des parcs d'attractions PortAventura, Ferrari Land, et le parc aquatique Aquopolis. Arrêt de bus 🚍 à proximité, ainsi que location de vélos et trottinettes.</p>
             <p>Réservez dès maintenant pour des vacances inoubliables à Salou 😊. Pour plus d'infos, merci de nous contacter en mp. À bientôt ⛱️</p>
+            <div className="whatsapp-buttons">
+                <h4>Contactez-nous :</h4>
+                <a href="https://wa.me/32460979447" className="whatsapp-button">
+                    <FaWhatsapp /> David
+                </a>
+                <a href="https://wa.me/32472966153" className="whatsapp-button">
+                    <FaWhatsapp /> Isabelle
+                </a>
+            </div>
         </section>
     );
 };
