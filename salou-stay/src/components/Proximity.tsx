@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../Proximity.css';
 
+
 const Proximity: React.FC = () => {
     // Ref per riferirsi agli elementi che si desidera animare
     const itemRefs = useRef<HTMLDivElement[]>([]);
@@ -37,7 +38,7 @@ const Proximity: React.FC = () => {
                     </p>
                 </div>
                 <div className="proximity-image">
-                    <img src="/public/activ/WhatsApp Image 2024-08-19 at 19.10.09 (2).jpeg" alt="PortAventura World" />
+                <img src="/activ/panoramica-parque.jpg" alt="Ferrari Land" />
                 </div>
             </div>
             <div className="proximity-item reverse" ref={el => el && (itemRefs.current[1] = el)}>
@@ -49,7 +50,7 @@ const Proximity: React.FC = () => {
                     </p>
                 </div>
                 <div className="proximity-image">
-                    <img src="/public/activ/WhatsApp Image 2024-08-19 at 19.10.09.jpeg" alt="Ferrari Land" />
+                    <img src="/activ/ferrari.jpeg" alt="Ferrari Land" />
                 </div>
             </div>
             <div className="proximity-item" ref={el => el && (itemRefs.current[2] = el)}>
@@ -60,7 +61,7 @@ const Proximity: React.FC = () => {
                     </p>
                 </div>
                 <div className="proximity-image">
-                    <img src="/public/activ/WhatsApp Image 2024-08-19 at 19.10.09 (1).jpeg" alt="Aquópolis" />
+                    <img src="/activ/acquopolis.jpeg" alt="Aquópolis" />
                 </div>
             </div>
         </section>

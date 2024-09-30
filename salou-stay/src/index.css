@@ -9,3 +9,14 @@
 h1,h2,h3{
   font-family: 'Pacifico', cursive;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Nasconde lo scroll orizzontale */
+}
+
+#root {
+  width: 100vw; /* Occupa tutta la larghezza della viewport */
+  overflow-x: hidden; /* Nasconde lo scroll orizzontale */
+}
