@@ -1,0 +1,17 @@
+/* VideoSection.css */
+.video-section {
+    position: relative;
+    width: 100vw;   /* 100% della larghezza della viewport */
+    height: 100vh;  /* 100% dell'altezza della viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Taglia l'eccesso nel caso in cui il video esca dalla sezione */
+    background: linear-gradient(135deg, #87cefa, #f5deb3);
+  }
+  
+  .video {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni del video riempiendo l'area */
+  }

@@ -36,7 +36,6 @@ const Gallery: React.FC = () => {
         '/img/route2.jpg',
         '/img/route3.jpg',
         '/img/route4.jpg',
-        'img/appartment-tour2.mp4',
     ];
 
     const handlePrev = () => {
@@ -59,27 +58,9 @@ const Gallery: React.FC = () => {
                     className="gallery-slide"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
-                    {media.map((item, index) => {
-                        // Se il file è un video, usa il tag video
-                        if (item.endsWith('.mp4')) {
-                            return (
-                                <video
-                                    key={index}
-                                    src={item}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    controls={false} // Nessun controllo, si riproduce in loop
-                                    style={{ width: '100%' }}
-                                />
-                            );
-                        } else {
-                            // Altrimenti è un'immagine
-                            return (
-                                <img key={index} src={item} alt={`Media ${index + 1}`} />
-                            );
-                        }
-                    })}
+                    {media.map((item, index) => (
+                        <img key={index} src={item} alt={`Media ${index + 1}`} />
+                    ))}
                 </div>
                 <button className="gallery-button prev" onClick={handlePrev}>
                     &#10094;

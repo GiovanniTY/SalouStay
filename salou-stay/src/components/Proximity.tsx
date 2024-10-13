@@ -38,7 +38,7 @@ const Proximity: React.FC = () => {
                     </p>
                 </div>
                 <div className="proximity-image">
-                <img src="/activ/panoramica-parque.jpg" alt="Ferrari Land" />
+                <img src="/activ/panoramica.jpg" alt="Acquopolis" />
                 </div>
             </div>
             <div className="proximity-item reverse" ref={el => el && (itemRefs.current[1] = el)}>

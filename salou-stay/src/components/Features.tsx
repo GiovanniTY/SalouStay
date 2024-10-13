@@ -23,7 +23,7 @@ const Features: React.FC = () => {
                 <div className="feature-item">
                     <div className="icon">🚿</div>
                     <h3>Salle de Bain</h3>
-                    <p>Bien équipé</p>
+                    <p>Bien équipée</p>
                 </div>
                 <div className="feature-item">
                     <div className="icon">🍳</div>
